@@ -85,14 +85,14 @@
 <?php unset($__componentOriginal71c6471fa76ce19017edc287b6f4508c); ?>
 <?php endif; ?>
             <?php if (isset($component)) { $__componentOriginal71c6471fa76ce19017edc287b6f4508c = $component; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.text-input','data' => ['id' => 'surname','class' => 'block mt-1 w-full','type' => 'text','name' => 'surname','value' => old('surname'),'required' => true,'autofocus' => true,'autocomplete' => 'surname']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.text-input','data' => ['id' => 'surname','class' => 'block mt-1 w-full','type' => 'text','name' => 'surname','value' => old('surname', $user->surname),'required' => true,'autofocus' => true,'autocomplete' => 'surname']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('text-input'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['id' => 'surname','class' => 'block mt-1 w-full','type' => 'text','name' => 'surname','value' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(old('surname')),'required' => true,'autofocus' => true,'autocomplete' => 'surname']); ?>
+<?php $component->withAttributes(['id' => 'surname','class' => 'block mt-1 w-full','type' => 'text','name' => 'surname','value' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(old('surname', $user->surname)),'required' => true,'autofocus' => true,'autocomplete' => 'surname']); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginal71c6471fa76ce19017edc287b6f4508c)): ?>
@@ -134,14 +134,14 @@
 <?php unset($__componentOriginal71c6471fa76ce19017edc287b6f4508c); ?>
 <?php endif; ?>
             <?php if (isset($component)) { $__componentOriginal71c6471fa76ce19017edc287b6f4508c = $component; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.text-input','data' => ['id' => 'nick','class' => 'block mt-1 w-full','type' => 'text','name' => 'nick','value' => old('nick'),'required' => true,'autofocus' => true,'autocomplete' => 'nick']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.text-input','data' => ['id' => 'nick','class' => 'block mt-1 w-full','type' => 'text','name' => 'nick','value' => old('nick', $user->nick),'required' => true,'autofocus' => true,'autocomplete' => 'nick']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('text-input'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['id' => 'nick','class' => 'block mt-1 w-full','type' => 'text','name' => 'nick','value' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(old('nick')),'required' => true,'autofocus' => true,'autocomplete' => 'nick']); ?>
+<?php $component->withAttributes(['id' => 'nick','class' => 'block mt-1 w-full','type' => 'text','name' => 'nick','value' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(old('nick', $user->nick)),'required' => true,'autofocus' => true,'autocomplete' => 'nick']); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginal71c6471fa76ce19017edc287b6f4508c)): ?>

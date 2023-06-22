@@ -20,25 +20,20 @@
                 <?php $__currentLoopData = $images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $image): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="py-8 flex flex-wrap md:flex-nowrap">
                     <div style="display:inline-block; margin-left:0px">
+
                     <img src="<?php echo e($image->user->avatar); ?>" alt="" style="display:inline-block; width:50px;">
                         <span class="font-semibold title-font text-white"><?php echo e($image->user->name); ?></span>
                         <span class="font-semibold title-font text-white">  |  </span>
                         <span class="font-semibold title-font text-white-900"><?php echo e('@'); ?><?php echo e($image->user->nick); ?></span>
                     </div>
                     <div style="margin-top:50px">
-                        <img class="leading-relaxed" src="<?php echo e($image->image_path); ?>">
+                    <a href="<?php echo e(route("images.show", $image)); ?>">
+                            <img class="leading-relaxed" src="<?php echo e($image->image_path); ?>">
+                            </a>
                         <p class="font-semibold title-font text-white-900"><?php echo e('@'); ?><?php echo e($image->user->nick); ?>|<?php echo e($image->updated_at); ?></p>
                         <p class="font-semibold title-font text-white"><?php echo e($image->description); ?></p>
                     </div>
-                    <div style="display:inline-block;">
-                        <div style="display:inline-block;">
-                            <a href="<?php echo e(route("images.show", $image)); ?>">
-                                <svg style="display:inline-block; width: 30px; heigth: 30px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
-                                </svg>
-                            </a>
-
-                        </div>
+                    <div style="display:inline-block; margin-left:20px">
                         <span class="font-semibold title-font text-white"><?php echo e($image->comment_count); ?> Comentarios</span>
                         <span class="font-semibold title-font text-white"><?php echo e($image->like_count); ?> Likes</span>
                     </div>
